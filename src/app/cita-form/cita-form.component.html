@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Agendar Cita</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="paciente">Nombre del Paciente</label>
+      <input type="text" class="form-control" id="paciente" [(ngModel)]="cita.paciente" name="paciente" required>
+    </div>
+    <div class="form-group">
+      <label for="fecha">Fecha de la Cita</label>
+      <input type="datetime-local" class="form-control" id="horario" [(ngModel)]="cita.fecha" name="fecha" required>
+    </div>
+    <div class="form-group">
+      <label for="doctorId">Seleccionar Doctor</label>
+      <input type="number" class="form-control" id="doctorId" [(ngModel)]="cita.doctorId" name="doctorId" required>
+    </div>
+    <div class="form-group">
+      <label for="consultorioId">Seleccionar Consultorio</label>
+      <input type="number" class="form-control" id="consultorioId" [(ngModel)]="cita.consultorioId" name="consultorioId" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Agendar Cita</button>
+  </form>
+</div>

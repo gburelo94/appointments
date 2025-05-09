@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Lista de Citas</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Paciente</th>
+        <th>Horario</th>
+        <th>Doctor</th>
+        <th>Consultorio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cita of citas">
+        <td>{{ cita.paciente }}</td>
+        <td>{{ cita.fecha }}</td>
+        <td>{{ cita.doctorId }}</td>
+        <td>{{ cita.consultorioId }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="cancelarCita(cita.id)">Cancelar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
